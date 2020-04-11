@@ -1,0 +1,47 @@
+// 2020 is the end uhuuuuuuuuu
+            bool goRight = true;
+            int contSpaces = 0;
+            int maxSpaces = 30;
+            int atualYear = 1;
+            int lastYear = 2020;
+            string space = " ";
+            string spacePlus = "";
+       
+
+            while(atualYear < lastYear)
+            {
+            
+                Console.WriteLine(spacePlus + atualYear);
+                if (contSpaces == maxSpaces)
+                {
+                    goRight = false;
+
+                }
+                if (goRight == false)
+                {
+                    while (goRight == false && atualYear < lastYear + 1)
+                    {
+                        Console.WriteLine(spacePlus + atualYear);
+                        contSpaces--;
+                        atualYear++;
+                        spacePlus = "";
+                        for (int i = 0; i < contSpaces; i++)
+                        {
+                            spacePlus = spacePlus + space;
+                        }
+                        if (contSpaces == 0)
+                        {
+                            goRight = true;
+                        }
+                    }
+                }
+                contSpaces++;
+                atualYear++;
+                spacePlus = "";
+                for (int i = 0; i < contSpaces; i++)
+                {
+                    spacePlus = spacePlus + space;
+                }
+
+            }
+            Console.WriteLine("                   THE END?\n\n\n\n\n\n\n");
