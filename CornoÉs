@@ -1,0 +1,19 @@
+ //Esse código diz se você é corno
+
+
+
+            Console.WriteLine("Você está vivo?");
+
+            string resposta = Console.ReadLine();
+            if (resposta == "sim")
+            {
+                Console.WriteLine("Você é corno");
+            }
+            else if(resposta == "Não")
+            {
+                Console.WriteLine("Você foi corno");
+            }
+            else
+            {
+                Console.WriteLine("Você é o corno de Schrödinger");
+            }
