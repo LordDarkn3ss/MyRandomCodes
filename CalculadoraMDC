@@ -1,0 +1,35 @@
+	    Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("     -----Calculadora de MDC  -----");
+            Console.Write("O Primeiro Número é: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("O Segundo Número é: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("\n\nO MDC de " + num1 + " e " + num2);
+
+            int cont = 2;
+            int result = 1;
+
+            for (int i = 1; i <= num1 || i <= num2; i++)
+            {
+                if (i == 1)
+                {
+                    continue;
+                }
+                else if (num1 % i == 0 && num2 % i == 0)
+                {
+                    num1 /= i;
+                    num2 /= i;
+                    result *= i;
+                    i--;
+                }
+            }
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(2));
+
+            Console.WriteLine(" é " + result);
+            int MDC = result;
+
+            int mmc = num1 * num2 / MDC;
+            Console.WriteLine("já o mmc é \n" + mmc);
+
